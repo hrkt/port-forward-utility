@@ -1,0 +1,10 @@
+acknoledgement for 3rd party libraries
+
+*JSCH
+- JSch is a product of JCraft.com
+  http://www.jcraft.com/jsch/
+- license: BSD style license.
+  http://www.jcraft.com/jsch/LICENSE.txt
+- these 2 lines below are copyfight notice of JSCH
+  Copyright (c) 2002-2012 Atsuhiko Yamanaka, JCraft,Inc. 
+  All rights reserved.

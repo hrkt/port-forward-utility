@@ -1,0 +1,65 @@
+README for PortForwardUtility
+
+* Summary
+PortForwardUtility is a simple, cross platform, command-line based, port forwarding utility.
+
+* Description of this utility
+
+PortForwardUtility runs on Java runtime, 1.5 or later.
+
+
+
+* Port forwarding?
+Please see wikipedia -> http://en.wikipedia.org/wiki/Port_forwarding
+
+* usage:
+java -jar PortForwardUtility-0.0.1-SNAPSHOT-jar-with-dependencies.jar [option : path of config file]
+
+If path is not specified, PortFowardUtility reads configuration on same directory with jar file.
+
+* configuration file
+Configuration file for PortForwardUtility is a plain text file with specific format.
+Each line has key and value structure. Comment lines start with "#", blank lines are ignored.
+
+key -> meaning
+USER: -> user account
+HOST: -> host address of that PortForwardUtility will connect to
+PORT: -> (optional) SSH port of the host. Default is 22. 
+L:    -> port forwarding rule. L:localPort:destHostAddress:destHostPort
+         - localPort, destHostPort -> Integer number 0 - 65535
+         - destHostAddress -> ip address or FQDN.
+example) using host 10.0.1.1, local port 8001 will be forwarded to 
+10.0.2.1 port 8000, and local port 8002 will be forwarded to
+10.0.2.2 port 8000
+----------------------------------------------------------------------
+#test rule file for PorwardUtility
+
+#user
+USER:user1
+#host
+HOST:10.0.1.1
+
+#forward rule
+L:8001:10.0.2.1:8000
+L:8002:10.0.2.2:8000
+----------------------------------------------------------------------
+
+
+
+* Requirements
+- Java 2 runtime 5.0 or higher
+- Windows/Linux/(Mac)OS X/Un*x
+
+* History
+- May 13, 2013 version 0.1
+
+* License
+- Apache License 2.0
+
+* 3rd party libraries
+  see also "3rd-party-acknowledgement"
+  - JSch by JCraft.com
+
+* Roadmap
+- GUI will be added in the future.
+ 
