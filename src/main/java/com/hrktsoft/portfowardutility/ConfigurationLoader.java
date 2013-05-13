@@ -124,7 +124,9 @@ public class ConfigurationLoader {
             throw e;
         } finally {
             try {
-                br.close();
+                if(null != br){
+                    br.close();
+                }
             } catch (IOException e) {
                 System.err.println("An error occured in closing file.");
             }
